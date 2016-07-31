@@ -97,6 +97,7 @@ def login(args, position):
 
     SearchConfig.LOGGED_IN = time.time()
     log.info('Login successful')
+    time.sleep(args.stepdelay)
 
 
 def login_if_necessary(args, position):
@@ -140,7 +141,7 @@ def search(args, req_sleep=1):
             break
 
         i += 1
-        time.sleep(0.2)
+        time.sleep(args.stepdelay)
 
 
 def search_async(args):
