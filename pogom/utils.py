@@ -31,6 +31,7 @@ def get_args():
 
     parser.add_argument('-d', '--debug', type=str.lower, help='Debug Level [info|debug]', default=None)
     parser.add_argument('-c', '--pycurl', help='Use pycurl downloader (unstable)', action='store_true')
+    parser.add_argument('-sd', '--stepdelay', type=int, help='Time delay between requests in scan threads (in seconds)', default=5)
 
     args = parser.parse_args()
     if args.password is None:
